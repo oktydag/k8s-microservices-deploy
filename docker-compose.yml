@@ -1,0 +1,23 @@
+  
+#Redis
+version: '3.3'
+services:
+  redis:
+    container_name: redis
+    image: redis
+    environment:
+     TZ: Europe/Istanbul
+    volumes:
+      - '/var/lib/redis-in-docker/data:/data'
+    ports:
+      - '6379:6379'
+  
+  customer-services-app:
+    container_name: cs-app-2
+    depends_on:
+      - 'redis'
+    ports:
+      - '5005:5005'
+    image: f43c029a0ceb 
+    links: 
+      - 'redis'
