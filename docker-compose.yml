@@ -27,7 +27,7 @@ services:
     depends_on:
       - 'redis'
     ports:
-      - '500:5005'
+      - '5006:5006'
     image: oktydag/notification-services-app 
     links: 
       - 'redis'
