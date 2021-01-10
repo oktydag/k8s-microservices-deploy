@@ -16,9 +16,9 @@ func AddCustomer(w http.ResponseWriter, r *http.Request) {
 	message = repository.InitializeRedis()
 	fmt.Fprintln(w, message)
 
-	repository.IncrementValue("customer-couunt")
+	repository.IncrementValue("customer-count")
 
-	var result,_ = repository.GetValue("customer-couunt")
+	var result,_ = repository.GetValue("customer-count")
 	fmt.Fprintln(w, result)
 
 	fmt.Fprintln(w, "New customer added !")

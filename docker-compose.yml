@@ -18,6 +18,16 @@ services:
       - 'redis'
     ports:
       - '5005:5005'
-    image: f43c029a0ceb 
+    image: oktydag/customer-services-app 
+    links: 
+      - 'redis'
+
+  notification-services-app:
+    container_name: ns-app-2
+    depends_on:
+      - 'redis'
+    ports:
+      - '500:5005'
+    image: oktydag/notification-services-app 
     links: 
       - 'redis'
