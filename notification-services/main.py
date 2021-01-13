@@ -15,7 +15,7 @@ def index():
     # print(r.keys())
     # print(type(r.get('customer-count')))
 
-    return 'Hi business administrator, current customer count is : ' + r.get('customer-couunt').decode("utf-8") 
+    return 'Hi business administrator, current customer count is : ' + r.get('customer-count').decode("utf-8") 
 
 if __name__ == "__main__":
     app.run(port=5006,debug=True)
