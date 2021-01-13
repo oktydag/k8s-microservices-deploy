@@ -8,7 +8,7 @@ app = Flask(__name__)
 REDIS_PORT = 6379
 REDIS_HOST = 'redis' # set docker-compose service name
 
-@app.route("/",methods = ["GET"])
+@app.route("/v1/api/notification/info",methods = ["GET"])
 def index():
     r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT)
     # print(r.ping())
@@ -18,4 +18,4 @@ def index():
     return 'Hi business administrator, current customer count is : ' + r.get('customer-couunt').decode("utf-8") 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=5006,debug=True)

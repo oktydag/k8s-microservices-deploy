@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: notification-services-app-pod
+  labels:
+    name: notification-services-app-pod
+    app: k8s-microservices-deploy-example
+spec:
+  containers:
+  - name: notification-services-app
+    image: oktydag/notification-services-app:1.0
+    ports:
+         - containerPort: 80

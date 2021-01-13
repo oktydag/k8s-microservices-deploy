@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer-services-app-service
+  labels:
+    name: customer-services-app-service
+    app: k8s-microservices-deploy-example
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    name: customer-services-app-pod
+    app: k8s-microservices-deploy-example

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: notification-services-app-service
+  labels:
+    name: notification-services-app-service
+    app: k8s-microservices-deploy-example
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    name: notification-services-app-pod
+    app: k8s-microservices-deploy-example

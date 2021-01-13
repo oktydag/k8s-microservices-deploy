@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: customer-services-app-pod
+  labels:
+    name: customer-services-app-pod
+    app: k8s-microservices-deploy-example
+spec:
+  containers:
+  - name: customer-services-app
+    image: oktydag/customer-services-app:1.0
+    ports:
+         - containerPort: 80
