@@ -31,20 +31,20 @@ Alternatively, you can use **docker compose ** in location of docker-compose.yml
 <pre>$ cd k8s-files
 </pre>
 
-**for notification-services-app;
-**
+**for notification-services-app;**
+
 <pre>$ kubectl create -f customer-services-app-deployment.yml
 $ kubectl create -f customer-services-app-services.yml
 </pre>
 
-**for redis;
-**
+**for redis;**
+
 <pre>$ kubectl create -f redis-deployment.yml
 $ kubectl create -f redis-services.yml
 </pre>
 
-**for redis;
-**
+**for redis;**
+
 <pre>$ kubectl create -f notification-services-app-deployment.yml
 $ kubectl create -f notification-services-app-services.yml
 </pre>
