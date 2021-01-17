@@ -23,7 +23,7 @@ https://github.com/oktydag/k8s-microservices-deploy.git
 <pre>$ docker run -d -p 5006:5006 --name ns-app oktydag/notification-services-app:1.0
 </pre>
 
-Alternatively, you can use **docker compose ** in location of docker-compose.yml file;
+Alternatively, you can use **docker compose** in location of docker-compose.yml file;
 <pre>$ docker-compose up --build
 </pre>
 
