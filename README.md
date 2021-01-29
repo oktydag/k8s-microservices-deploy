@@ -31,7 +31,7 @@ Alternatively, you can use **docker compose** in location of docker-compose.yml 
 <pre>$ cd k8s-files
 </pre>
 
-**for notification-services-app;**
+**for customer-services-app;**
 
 <pre>$ kubectl create -f customer-services-app-deployment.yml
 $ kubectl create -f customer-services-app-services.yml
@@ -43,7 +43,7 @@ $ kubectl create -f customer-services-app-services.yml
 $ kubectl create -f redis-services.yml
 </pre>
 
-**for redis;**
+**for notification-services-app;**
 
 <pre>$ kubectl create -f notification-services-app-deployment.yml
 $ kubectl create -f notification-services-app-services.yml
